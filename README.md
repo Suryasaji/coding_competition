@@ -1,1 +1,1 @@
-https://suryasaji.github.io/coding_competition/public/index.html
+https://suryasaji.github.io/coding_competition/code/public/index.html
