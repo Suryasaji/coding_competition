@@ -1,0 +1,399 @@
+:root {
+    --primary-color: #ff9900;
+    --primary-dark: #e68a00;
+    --secondary-color: #00b3ff;
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --neon-pink: #ff00ff;
+    --neon-blue: #00ffff;
+    --neon-green: #00ff00;
+    --success-color: #00cc66;
+    --danger-color: #ff3366;
+    --warning-color: #ffcc00;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Login Page Styles */
+.login-page {
+    background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+}
+
+.login-box {
+    padding: 2rem 0;
+}
+
+.neon-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px var(--neon-pink),
+                 0 0 20px var(--neon-blue),
+                 0 0 30px var(--neon-green);
+    color: #fff;
+    animation: neon-flicker 2s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        opacity: 1;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.8;
+    }
+}
+
+.login-card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.login-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.create-account-btn {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.create-account-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #333;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25);
+    color: white;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.game-page {
+    background-color: var(--dark-bg);
+    background-image: linear-gradient(45deg, #121212 25%, #1a1a1a 25%, #1a1a1a 50%, #121212 50%, #121212 75%, #1a1a1a 75%, #1a1a1a 100%);
+    background-size: 20px 20px;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.brand-letter {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.points-card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.points-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.points-display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--warning-color);
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    margin: 1rem 0;
+}
+
+.lifeline-card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.lifeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lifeline-card .card-title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cost-text {
+    font-size: 0.9rem;
+    color: var(--warning-color);
+    margin-bottom: 1rem;
+}
+
+.lifeline-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.lifeline-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lifeline-btn:disabled {
+    background-color: #555;
+    border-color: #444;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.response-card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+
+.response-card .card-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+}
+
+.response-card .card-body {
+    padding: 1.5rem;
+}
+
+pre {
+    background-color: #282c34;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+#aiQuery {
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    color: white;
+    resize: none;
+}
+
+#aiQuery:focus {
+    background-color: #333;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25);
+}
+
+.chars-remaining {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #333;
+}
+
+.modal-footer {
+    border-top: 1px solid #333;
+}
+
+.partner-avatar {
+    font-size: 4rem;
+    color: var(--secondary-color);
+}
+
+.partner-info {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.partner-chat {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages {
+    background-color: #232323;
+    border-radius: 8px;
+    padding: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.system-message {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.chat-message {
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    max-width: 80%;
+    word-break: break-word;
+}
+
+.message-sent {
+    background-color: var(--primary-color);
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+.message-received {
+    background-color: #444;
+    color: white;
+    align-self: flex-start;
+    margin-right: auto;
+    border-bottom-left-radius: 0;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .neon-title {
+        font-size: 1.8rem;
+    }
+    
+    .points-display {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-box {
+        padding: 1rem;
+    }
+    
+    .neon-title {
+        font-size: 1.5rem;
+    }
+}
+
+.chars-counter {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 2px;
+}
+
+#aiResponse {
+    margin-top: 10px;
+    background-color: #121212;
+    font-family: monospace;
+}
