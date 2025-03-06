@@ -112,19 +112,29 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Make input text color white */
 .form-control {
-    background-color: #2d2d2d;
+    background-color: #2d2d2d;  /* Dark background for input */
     border: 1px solid #444;
-    color: white;
+    color: white;  /* White text */
     transition: all 0.3s ease;
 }
 
+/* Placeholder text color (for better visibility) */
+.form-control::placeholder {
+    color: #bbbbbb;  /* Light gray for contrast */
+    opacity: 0.8;
+}
+
+/* Focus effect */
 .form-control:focus {
     background-color: #333;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25);
     color: white;
 }
+
+
 
 .fade-in {
     animation: fadeIn 1s ease-in;
