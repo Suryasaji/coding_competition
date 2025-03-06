@@ -365,7 +365,7 @@ async function askAI() {
 
 
 async function generateCodeSnippet() {
-    const cost = 30; // Points cost for using this lifeline
+    const cost = 50; // Points cost for using this lifeline
     const selectedQuestion = document.getElementById('snippetQuestion').value;
     const outputField = document.getElementById('snippetOutput');
 
